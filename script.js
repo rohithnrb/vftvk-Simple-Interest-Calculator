@@ -7,14 +7,16 @@ function compute()
 
    if(principal == ""){
        alert("Please enter principal");
+       document.getElementById("principal").focus();
    }else if(rate == ""){
        alert("Please enter rate");
    }else if(years == ""){
        alert("Please enter years");
    }else{
 
-        if(principal == 0){
+        if(principal <= 0){
             alert("Please enter a positive number for principal");
+              document.getElementById("principal").focus();
         }else{
             var amount = principal * years * rate /100;
             var year = new Date().getFullYear()+parseInt(years);
